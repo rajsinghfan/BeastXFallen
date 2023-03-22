@@ -11,7 +11,7 @@ from pyrogram.errors import MessageNotModified
 from FallenMusic.Modules.func import *
 from config import OPENAI_API 
 
-@ren.on_message(filters.command("ask") & filters.private | filters.group)
+@app.on_message(filters.command("ask") & filters.private | filters.group)
 async def chatgpt(c: Client, m: Message):
     randydev = (
         m.text.split(None, 1)[1]
