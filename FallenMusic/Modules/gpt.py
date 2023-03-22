@@ -8,8 +8,21 @@ from pyrogram import *
 from pyrogram.types import *
 from pyrogram import Client as ren 
 from pyrogram.errors import MessageNotModified
-from FallenMusic.Modules.func import *
-from config import OPENAI_API 
+from FallenMusic.Modules.func import * 
+from asyncio import gather
+import httpx
+from aiohttp import ClientSession
+OPENAI_API = "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"
+# Aiohttp Async Client
+session = ClientSession()
+
+# HTTPx Async Client
+http = httpx.AsyncClient(
+    http2=True,
+    timeout=httpx.Timeout(40),
+)
+
+
 
 @app.on_message(filters.command("ask") & filters.private | filters.group)
 async def chatgpt(c: Client, m: Message):
