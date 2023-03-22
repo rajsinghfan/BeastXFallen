@@ -8,7 +8,7 @@ from pyrogram import *
 from pyrogram.types import *
 from pyrogram import Client as ren 
 from pyrogram.errors import MessageNotModified
-from FallenMusic.Modules.func import * 
+#from FallenMusic.Modules.func import * 
 from asyncio import gather
 import httpx
 from aiohttp import ClientSession
