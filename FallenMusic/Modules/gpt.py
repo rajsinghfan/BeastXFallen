@@ -12,7 +12,7 @@ from FallenMusic import app
 from asyncio import gather
 import httpx
 from aiohttp import ClientSession
-OPENAI_API = "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"
+OPENAI_API = "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"
 # Aiohttp Async Client
 session = ClientSession()
 
